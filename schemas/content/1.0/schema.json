@@ -1361,29 +1361,17 @@
                 "type": "string"
             }
         },
-        "se_gradeLevels": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
-        },
-          "test_competencies_v2": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "test_competencies_v3": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "test_competencies_v4": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+        "taxonomyPaths_v2": {
+          "type": "array",
+          "items": {
+            "type": "object"
           }
+        },
+        "competencies_v3": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
     }
 }
