@@ -1372,7 +1372,7 @@
             "items": {
               "type": "object"
             }
-          },,
+          },
           "test_competencies_v3": {
             "type": "array",
             "items": {
