@@ -1265,6 +1265,12 @@
       "items": {
         "type": "string"
       }
+    },
+    "test_competencies_v2": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
     }
   }
 }
