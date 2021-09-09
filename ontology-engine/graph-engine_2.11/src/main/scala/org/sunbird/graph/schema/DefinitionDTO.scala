@@ -122,8 +122,10 @@ class DefinitionDTO(graphId: String, schemaName: String, version: String = "1.0"
             //Todo:: Remove this after v4 apis
             val invalidProps: List[String] = request.getRequest.keySet().asScala.toList.filterNot(key => propsList.contains(key) || StringUtils.endsWith(key, "batch_count"))
 
-            if(null != invalidProps && !invalidProps.isEmpty)
+            if(null != invalidProps && !invalidProps.isEmpty) {
+                println("Validate Request: client error... invalid Props: " + invalidProps.asJavaCollection)
                 throw new ClientException(ResponseCode.CLIENT_ERROR.name, "Invalid request", java.util.Arrays.asList("Invalid Props are : " + invalidProps.asJavaCollection))
+            }
         }
     }
 
