@@ -418,7 +418,8 @@
         "LearningActivity",
         "PreviousBoardExamPapers",
         "LessonPlanResource",
-        "TVLesson"
+        "TVLesson",
+        "Program"
       ]
     },
     "resourceType": {
