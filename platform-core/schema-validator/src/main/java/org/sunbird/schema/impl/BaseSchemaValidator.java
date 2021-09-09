@@ -87,6 +87,13 @@ public abstract class BaseSchemaValidator implements ISchemaValidator {
     }
 
     public ValidationResult validate(Map<String, Object> data) throws Exception {
+        try {
+            System.out.println("Incoming Data -> " + (new ObjectMapper()).writeValueAsString(data));
+            System.out.println("Constructed JsonSchema ->");
+            System.out.println((new ObjectMapper()).writeValueAsString(schema));
+        }catch(Exception e) {
+            System.out.println("Failed to write incoming data.");
+        }
         String dataWithDefaults = withDefaultValues(JsonUtils.serialize(data));
         Map<String, Object> validationDataWithDefaults = cleanEmptyKeys(JsonUtils.deserialize(dataWithDefaults, Map.class));
 
@@ -97,7 +104,7 @@ public abstract class BaseSchemaValidator implements ISchemaValidator {
         return new ValidationResult(messages, dataMap, relations, externalData);
     }
 
-    private Map<String, Object> cleanEmptyKeys(Map<String, Object> input) {
+    private Map<String, Object> cleacleanEmptyKeysnEmptyKeys(Map<String, Object> inputwithDefaultValues) {
         return input.entrySet().stream().filter(entry -> {
             Object value = entry.getValue();
             if(value == null){
