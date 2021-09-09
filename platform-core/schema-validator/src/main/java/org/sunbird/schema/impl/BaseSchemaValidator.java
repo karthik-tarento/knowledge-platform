@@ -104,7 +104,7 @@ public abstract class BaseSchemaValidator implements ISchemaValidator {
         return new ValidationResult(messages, dataMap, relations, externalData);
     }
 
-    private Map<String, Object> cleacleanEmptyKeysnEmptyKeys(Map<String, Object> inputwithDefaultValues) {
+    private Map<String, Object> cleanEmptyKeys(Map<String, Object> input) {
         return input.entrySet().stream().filter(entry -> {
             Object value = entry.getValue();
             if(value == null){
